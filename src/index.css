@@ -1,13 +1,113 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: whitesmoke;
+}
+
+.form {
+  border: 1px solid;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 440px;
+  padding: 7px 30px 15px;
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.label {
+  text-align: center;
+}
+
+.st {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.time {
+  padding: 5px;
+  width: 70px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.date {
+  padding: 5px;
+  width: 110px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.buttons {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.send,
+.clear {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.send:active {
+  opacity: 10%;
+}
+
+.clear:active {
+  opacity: 10%;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.preloaderSpinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
